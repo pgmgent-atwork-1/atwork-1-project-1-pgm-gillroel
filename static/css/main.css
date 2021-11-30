@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "Moderat";
+    src: url('../fonts/Moderat/fontie-package/Moderat\ Light.woff2') format('woff2'),
+        url('../fonts/Moderat/fontie-package/Moderat\ Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Moderat";
+    src: url('../fonts/Moderat/fontie-package/Moderat\ Regular.woff2') format('woff2'),
+        url('../fonts/Moderat/fontie-package/Moderat\ Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -6,23 +23,28 @@
 }
 
 body {
+    font-family: "Moderat";
     color: #000;
-    width: 80%;
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
-.containerNavigation {
-    
-    
+p {
+    font-size: 1.7rem;
 }
 
+/* begin navigation */
 
+header {
+    width: 90%;
+}
 
 .navigation {
 
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     margin: 2rem;
-    
+
 }
 
 .navigation ul {
@@ -39,5 +61,579 @@ body {
 }
 
 .logo a {
-    margin: 2rem;    
+    margin: 2rem;
+}
+
+.logo a img {
+    height: 2.5rem;
+}
+
+.active {
+    color: #003cff;
+    border-bottom: 2px solid #003cff;
+}
+
+/* end navigation */
+
+/* begin footer */
+
+.footer {
+    margin-bottom: 2rem;
+    background-color: #E6E6E6;
+    width: 100%;
+}
+
+.containerFooter {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.containerFooter h2 {
+    padding-top: 2rem;
+}
+
+.containerFooter p {
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.containerFooter a {
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 2rem;
+}
+
+.containerFooter a:hover {
+    color: #003cff;
+    border-bottom: 1px solid #003cff;
+}
+
+.socials ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.socials a img {
+    height: 1.8rem;
+    margin-left: 0.8rem;
+}
+
+.socials a {
+    color: #000;
+    text-decoration: none;
+
+}
+
+.socials a:hover,
+img:hover {
+    color: #003cff;
+}
+
+#email {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #E6E6E6;
+    padding: 5px;
+}
+
+.instaContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+
+}
+
+.instaContainer h2 {
+    margin: 2rem 0rem 1rem 0rem;
+    font-size: 1.25rem;
+    width: 30%;
+}
+
+.instaContainer a {
+    margin: 4rem 0rem 0rem 2rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    width: 30%;
+    color: #000;
+}
+
+.instaContainer a:hover {
+    color: #003cff;
+    border-bottom: 1px solid #003cff;
+}
+
+.instaContainer img {
+    width: 40%;
+    object-position: center;
+    object-fit: cover;
+    margin: 1rem 1rem 1rem 0rem;
+}
+
+/* end footer */
+
+/* begin button */
+
+
+.button {
+
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 1.8rem;
+    background-color: #fff;
+
+
+}
+
+.buttonTop {
+    margin: 0 auto;
+    margin-left: 50%;
+    height: 1.8rem;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+/* end button */
+
+/* begin index.html */
+
+main {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.intro {
+    margin-bottom: 3rem;
+    width: 70%;
+    font-size: 1.75rem;
+}
+
+.intro h2,
+p {
+    margin-bottom: 1rem;
+}
+
+.intro a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid #000;
+}
+
+.artExhibitions {
+    margin-bottom: 3rem;
+
+}
+
+.artExhibitions a {
+    text-decoration: none;
+}
+
+.card {
+    margin-top: 3rem;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.card h3 {
+    color: #787878;
+    font-size: 1rem;
+    margin: 1rem 0rem 0.5rem 0rem;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid #000;
+    font-size: 1.1rem;
+}
+
+.card a:hover {
+
+    color: #003cff;
+    border-color: #003cff;
+}
+
+@media screen and (min-width:48rem) {
+
+    .cardContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .card {
+        margin-right: 2rem;
+    }
+}
+
+
+.bio {
+    margin-bottom: 2rem;
+}
+
+.bio img {
+    width: 70%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 2rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50vw);
+}
+
+.bio h2 {
+    margin-bottom: 1rem;
+}
+
+.bio a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.bio a:hover {
+    color: #003cff;
+    border-bottom: 2px solid #003cff;
+}
+
+.atelier_studio {
+    margin-bottom: 4rem;
+}
+
+.atelier_studio a {
+    text-decoration: none;
+    color: #003cff;
+}
+
+.atelier_studio a:hover {
+    border-bottom: 2px solid #003cff;
+
+}
+
+.studioCards img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 1rem;
+
+}
+
+.studioCards h3 {
+    color: #787878;
+    margin: 1rem 0rem 0.5rem 0rem;
+    font-size: 1rem;
+}
+
+.studioCards a {
+    text-decoration: none;
+    margin-bottom: 1rem;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.studioCards a:hover {
+    color: #003cff;
+    border-color: #003cff;
+}
+
+/* end index.html */
+
+/* begin biography */
+
+.containerBiography img {
+    width: 100%;
+    margin-bottom: 2rem;
+    
+}
+@media screen and (min-width:48rem) { 
+    .containerBiography img {
+        width: 60%;
+    }
+}
+
+
+
+.biographyText h2 {
+    margin: 2rem 0rem 1rem 0rem;
+    font-weight: 500;
+}
+
+.biographyText {
+    width: 90%;
+}
+
+.biographyImg {
+    width: 100%;
+    margin-left: -4rem;
+}
+
+.containerBiography p {
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+
+}
+
+
+.place p {
+    text-align: right;
+    font-size: 0.9rem;
+    margin-top: -1.5rem;
+    width: 60%;
+}
+
+@media screen and (min-width:48rem) {
+
+
+    .bioContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .biographyText {
+
+        width: 60%;
+    }
+}
+
+iframe {
+    margin-bottom: 4rem;
+}
+
+
+.quote p {
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+.flexImage h2 {
+    margin-bottom: 1rem;
+
+}
+
+.flexImage p,
+.naturText p {
+    margin-bottom: 1rem;
+}
+
+.diversityText {
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width:48rem) {
+    .naturText {
+        margin: 0 auto;
+        width: 60%;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .videoText {
+        width: 50%;
+    }
+
+
+    .quote {
+        width: 50%;
+        font-size: 2.5rem;
+    }
+
+    .diversityText {
+        width: 40%;
+        font-size: 1.1rem;
+        margin-bottom: 5rem;
+    }
+
+}
+
+@media screen and (min-width:48rem) {
+
+    .flexImage {
+        display: flex;
+        align-items: center;
+    }
+
+    .flexImage img {
+        width: 40%;
+        margin-right: 2rem;
+    }
+}
+
+/*begin extra page press */
+
+.containerPress {
+    width: 60%;
+
+}
+
+.containerPress li {
+    margin-left: 1rem;
+}
+
+.containerPress h1,
+h2,
+ul {
+    margin-bottom: 1rem;
+}
+
+.menuPress {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+/* begin atelier */
+
+.studio {
+    margin: 1rem 0rem 1rem 3rem;
+    width: 70%;
+}
+
+
+.studio p {
+    width: 60%;
+    font-size: 1rem;
+}
+
+@media screen and (min-width:48rem) {
+    .studio p {
+        font-size: 1.75rem;
+    }
+    
+}
+
+.atelierStudioContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cardAtelier {
+    width: 90%;
+    margin: 2rem 1rem;
+
+}
+
+.cardAtelier img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 1rem;
+
+}
+
+.cardAtelier h3 {
+    color: #787878;
+    margin: 1rem 0rem 0.5rem 0rem;
+    font-size: 1rem;
+}
+
+.cardAtelier a {
+    text-decoration: none;
+    margin-bottom: 1rem;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.cardAtelier a:hover {
+    color: #003cff;
+    border-color: #003cff;
+}
+
+.cardAtelier p {
+    font-size: 1.2rem;
+}
+
+
+@media screen and (min-width:48rem) {
+    .atelierStudioContainer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .cardAtelier {
+        width: 25%;
+    }
+}
+
+/* end atelier */
+
+/* start press pagina */
+
+.pressContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pressCards {
+    width: 90%;
+    margin: 2rem 1rem;
+
+}
+
+.pressCards img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 1rem;
+
+}
+
+.pressCards h3 {
+    color: #787878;
+    margin: 1rem 0rem 0.5rem 0rem;
+    font-size: 1rem;
+}
+
+.pressCards a {
+    text-decoration: none;
+    margin-bottom: 1rem;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.pressCards a:hover {
+    color: #003cff;
+    border-color: #003cff;
+}
+
+@media screen and (min-width:48rem) {
+    .pressContainer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .pressCards {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width:48rem) {
+
+
+    .studioContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .studioCards {
+        margin-right: 2rem;
+        width: 30%;
+    }
+
+
 }
