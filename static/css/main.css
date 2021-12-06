@@ -356,9 +356,10 @@ p {
 .containerBiography img {
     width: 100%;
     margin-bottom: 2rem;
-    
+
 }
-@media screen and (min-width:48rem) { 
+
+@media screen and (min-width:48rem) {
     .containerBiography img {
         width: 60%;
     }
@@ -512,7 +513,7 @@ ul {
     .studio p {
         font-size: 1.75rem;
     }
-    
+
 }
 
 .atelierStudioContainer {
@@ -621,6 +622,260 @@ ul {
         width: 25%;
     }
 }
+
+
+/* begin art and exhibtions */
+
+.filter {
+    margin-bottom: 2rem;
+    width: 90%;
+}
+
+.filter a {
+    margin-right: 1rem;
+    color: #000;
+    text-decoration: none;
+
+}
+
+.categories {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    width: 90%;
+}
+.categories ul {
+    display: flex;
+    
+}
+
+.categories li {
+    margin-right: 1rem;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+button.category {
+    border: none;
+    background: #fff;
+    
+}
+
+.years {
+    font-size: 0.9rem;
+    width:90%;
+}
+
+.artCards {
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width:48rem) {
+    .artCards {
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+
+.textContainerArt {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width:48rem) {
+
+    .textContainerArt {
+        width: 50%;
+    }
+}
+
+.textContainerArt a {
+    font-size: 28px;
+    color: #000;
+    text-decoration: none;
+}
+
+.textContainerArt h3 {
+    font-size: 1.1rem;
+    color: #787878;
+}
+
+
+@media screen and (min-width:48rem) {
+
+
+    .artContainerimg {
+        margin-left: 4rem;
+        width: 50%;
+    }
+
+    .textContainerArt {
+        width: 50%;
+    }
+}
+
+
+/* extra page art & exhibitions */
+
+.lupineContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.lupineImg {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50vw);
+}
+
+.lupineContainer img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.lupineContainer a {
+    color: #000;
+    text-decoration: none;
+    text-align: right;
+
+}
+
+.lupineText h3 {
+    color: #787878;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.lupineText h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.lupineText p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+@media screen and (min-width:48rem) {
+    .lupineContainerImg {
+        display: flex;
+    }
+
+    .lupineContainerImg img {
+        width: 50%;
+        margin-right: 3rem;
+    }
+}
+
+.cardsContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.lupineCards {
+    width: 90%;
+    margin: 2rem 1rem;
+
+}
+
+.lupineCards img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 1rem;
+
+}
+
+.lupineCards h3 {
+    color: #787878;
+    margin: 1rem 0rem 0.5rem 0rem;
+    font-size: 1rem;
+}
+
+.lupineCards a {
+    text-decoration: none;
+    margin-bottom: 1rem;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.lupineCards a:hover {
+    color: #003cff;
+    border-color: #003cff;
+}
+
+@media screen and (min-width:48rem) {
+    .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .lupineCards {
+        width: 25%;
+    }
+}
+
+
+/* start contact page */
+
+.containerContactPage {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.touchText {
+    width: 50%;
+}
+
+.touchText h1 {
+    font-size: 2.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.touchText p {
+    font-size: 1rem;
+}
+
+@media screen and (min-width:48rem) {
+    .contactContainer{
+        display: flex;
+    }
+
+    .contactGallery {
+        margin-right: 1rem;
+        width: 40%;
+    }
+    
+    .contactAtelier {
+        width: 33%;
+    }
+    
+}
+
+.contactContainer h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.contactContainer p {
+    font-size: 1rem;
+    color: #787878;
+}
+
+.contactContainer a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contactContainer a:hover {
+    border-bottom: 2px solid #003cff;
+    color: #003cff;
+}
+
 
 @media screen and (min-width:48rem) {
 

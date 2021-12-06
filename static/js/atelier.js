@@ -18,10 +18,18 @@ const app = {
 
         const html = ateliers.map((arts) => {
             
+            function subtitle(arts) {
+                if(arts.subtitle === null){
+                    return "";
+                }else {
+                    return arts.subtitle
+                }
+            }
+            
             return `
             <div class="cardAtelier">
                 <img src="atelier-studio/img/${arts.images}" loading="lazy" alt="${arts.images}">
-                <h3>${arts.subtitle}</h3>
+                <h3>${subtitle(arts)}</h3>
                 <h2>${arts.title}</h2>
                 <p>${arts.synopsis}</p>
                 <a href="#">learn more</a>

@@ -58,10 +58,19 @@
         generateHTMLForAtelierStudioHome() {
             const atelier = ateliers.filter(art => art.highlight === true);
             const atelierMapped = atelier.map((art) => {
+
+                function subtitle(art) {
+                    if(art.subtitle === null){
+                        return "";
+                    }else {
+                        return art.subtitle
+                    }
+                }
+
                 return `<div class="studioCards">
                 <img src="atelier-studio/img/${art.images}" loading="lazy"
                     alt="atelier-studio">
-                <h3>${art.subtitle}</h3>
+                <h3>${subtitle(art)}</h3>
                 <h2>${art.title}</h2>
                 <p>${art.synopsis}
                 </p>
