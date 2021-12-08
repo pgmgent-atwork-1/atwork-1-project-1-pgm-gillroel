@@ -5,85 +5,101 @@
         initialize() {
             this.cachesElements();
             this.buildUI();
+            this.generateHTML();
+            // this.filterCategory();
+            
             
 
         },
 
         buildUI() {
             
-            this.$art.innerHTML = this.generateHTMLForArtAndExhibitions();
+            this.$art.innerHTML = this.generateHTML();
             this.$categorie.innerHTML = this.generateHTMLForCategories();
-            this.$years.innerHTML = this.generateHTMLForyears();
+            this.$years.innerHTML = this.generateHTMLForYears();
         },
 
         cachesElements() {
             this.$art = document.querySelector(".artContainer");
-            this.$categorie = document.querySelector(".categories")
+            this.$categorie = document.querySelector(".categories");
             this.$years = document.querySelector(".years");
 
         },
 
 
-
-
-        generateHTMLForArtAndExhibitions(i) {
-
-            const artMapped = ARTS.map((arts) => {
-
-                function tags(arts){
-                    if(arts.tags.length >1){
-                        return `${arts.tags.join(" / ")}`
-                    }else {
-                        return `${arts.tags}`;
-                    }
+        years() {
+            const years =  [];
+            for( const works of ARTS){
+                if(!years.includes(works.year)){
+                    years.push(works.year);
                 }
 
-                function ifLocation(arts){
-                    if(arts.location === null) {
-                        return "";
-                    }else {
-                        return `- ${arts.location}`
-                    }
+            }
+            console.log(years);
+
+        },
+
+
+        generateHTML() {
+            const years =  [];
+            for( const works of ARTS){
+                if(!years.includes(works.year)){
+                    years.push(works.year);
                 }
 
+            }
 
-                function locationTags(arts){
-                    return `${tags(arts)} ${ifLocation(arts)}`
-
+            function tags(arts){
+                if(arts.tags.length >1){
+                    return `${arts.tags.join(" / ")}`
+                }else {
+                    return `${arts.tags}`;
                 }
+            }
 
-                function ifImg(arts){
-                    if(arts.length > 0){
-
-                        for(let i = 0; i< arts.length; i++){
-                            return `<img src="art-and-exhibitions/img/${arts[i]}" loading="lazy" alt="${arts.images}">`;
-                        }
-                        
-                    }else {
-                        return "";
-
-                        
-                    }
-                    
+            function ifLocation(arts){
+                if(arts.location === null) {
+                    return "";
+                }else {
+                    return `- ${arts.location}`
                 }
+            }
 
-                
 
-                return `
-                <div class = "artCards"><div class="textContainerArt">
-                    <a href="#">${arts.title}</a>
-                    <h3>${locationTags(arts)}</h3>
+            function locationTags(arts){
+                return `${tags(arts)} ${ifLocation(arts)}`
+
+            }
+
+            const html = years.map((year) => {
+                const work = ARTS.filter((work) => work.year === year).map((work) => {
+                    return `<li> <div class = "artCards"><div class="textContainerArt">
+                    <a href="art-and-exhibitions/detail/index.html">${work.title}</a>
+                    <h3>${locationTags(work)}</h3>
                 </div>
                 <div class="artContainerimg">
-                ${ifImg(arts.images)}
+                ${work.images.map(image => {
+                    return `
+                    <img src="art-and-exhibitions/img/${image}" loading="lazy" alt="${image}">
+                    `
+                }).join("")}
+                
                 </div>
                 </div>
-                `;
-            
-            }).join("");
-            console.log(artMapped);
-            return artMapped;
-        
+                </li>`
+
+                }).join("");
+                return `<div>
+                <h2 id="${year}" name="${year}">${year}</h2>
+                <ul>
+                ${work}
+                </ul>
+                </div>`
+                }).join("");
+
+                
+                return html;
+
         },
 
         generateHTMLForCategories() {
@@ -95,28 +111,53 @@
             return html;
         },
 
-        generateHTMLForyears() {
+        generateHTMLForYears() {
             const htmlYears = years.map((year) => {
-                return `<a href="${year}">${year}</a>`
+                return `<a href="art-and-exhibitions/index.html#${year}">${year}</a>`
             }).join("");
             return htmlYears;
+            
 
         },
 
-        filterCategory() {
-            this.categoryActive = "Show all";
-            const $category = document.querySelector(".category");
-            for(const $button of $category){
-                $button.addEventListener("click", () => {
-                    const category = $btn.dataset.category;
-                    this.categoryActive = category;
-                },false);
-            }
-
-        }
         
-    
+        categoryActive: null,
 
+        // filterCategory() {
+
+        //     const $category = document.querySelectorAll(".category");
+        //     for(const $button of $category){
+        //         $button.addEventListener("click", () => {
+        //             const category = $button.dataset.category
+        //             this.categoryActive = category;
+        //             this.generateHTMLFilter();
+                    
+
+        //             console.log(this.categoryActive);
+                    
+        //         },false); 
+                
+        //     }
+
+        //     this.generateHTMLFilter();
+            
+
+        // },
+
+
+        // generateHTMLFilter() {
+        //     const filter = ARTS.filter((work) => {
+        //     work.tags[0] === this.categoryActive;
+        //     })
+        //     this.$art.innerHTML = this.generateArtwork(filter);
+        // },
+
+        // // generateArtwork(items) {
+        // //     return items.map((item) => {
+        // //         return`<h1> ${item.title}</h1>`;
+
+        // //     }).join("");
+        // // },
 
     };
 

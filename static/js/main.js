@@ -1,25 +1,9 @@
 (() => {
 
-    // indexof() 
-
-
-
-    // const $buttonTop = document.querySelector(".button");
-
-    // $buttonTop.addEventListener('click', () => {
-    //     document.documentElement.scrollTop = 0;
-
-    // }, false)
-
-
-
-    // begin atelier studio
-
     const app = {
         initialize() {
             this.cachesElements();
             this.buildUI();
-            // this.generateHTMLForArtExhibitionsHome();
         },
 
 
@@ -27,6 +11,8 @@
             
             this.$artExhibitions = document.querySelector(".cardContainer");
             this.$atelierStudio = document.querySelector(".studioContainer");
+            this.$time = document.querySelector(".contactContainer");
+            
         },
 
         
@@ -34,6 +20,7 @@
             
             this.$artExhibitions.innerHTML = this.generateHTMLForArtExhibitionsHome();
             this.$atelierStudio.innerHTML = this.generateHTMLForAtelierStudioHome();
+            this.$time.innerHTML = this.generateTime();
         },
 
         generateHTMLForArtExhibitionsHome() {
@@ -46,7 +33,7 @@
                 <h2>${art.title}</h2>
                 <p>${art.discription}
                 </p>
-                <a href="#">learn more</a>
+                <a href="art-and-exhibitions/index.html">learn more</a>
             </div>`;
 
             }).join("");
@@ -74,11 +61,19 @@
                 <h2>${art.title}</h2>
                 <p>${art.synopsis}
                 </p>
-                <a href="#">Learn more</a>
+                <a href="atelier-studio/index.html">Learn more</a>
             </div>`
 
             }).join("");
             return atelierMapped;
+        },
+
+        generateTime() {
+            const today = new Date();
+            const time = `<p>Time in belgium ${today.getHours()}:${today.getMinutes()}</p>;`
+            
+            console.log(time);
+            return time;
         }
 
     };

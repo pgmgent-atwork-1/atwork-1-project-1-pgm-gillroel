@@ -32,7 +32,7 @@ const app = {
                 <h3>${subtitle(arts)}</h3>
                 <h2>${arts.title}</h2>
                 <p>${arts.synopsis}</p>
-                <a href="#">learn more</a>
+                <a href="art-and-exhibitions/detail/index.html">learn more</a>
             </div>`
         }).join("");
         return html;

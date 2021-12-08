@@ -134,6 +134,7 @@ img:hover {
     height: 2.5rem;
     background-color: #E6E6E6;
     padding: 5px;
+    max-width: 18rem;
 }
 
 .instaContainer {
@@ -141,7 +142,18 @@ img:hover {
     flex-wrap: wrap;
     width: 80%;
     justify-content: space-between;
+}
 
+@media screen and (min-width:48rem) {
+    .instaContainer {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .instaContainer a {
+        margin-left: 10rem;
+    }
+    
 }
 
 .instaContainer h2 {
@@ -169,6 +181,22 @@ img:hover {
     object-fit: cover;
     margin: 1rem 1rem 1rem 0rem;
 }
+.footerImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:48rem) {
+    .footerImg {
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-left: 15rem;
+    }
+    
+}
+
+
 
 /* end footer */
 
@@ -176,21 +204,22 @@ img:hover {
 
 
 .button {
-
     position: fixed;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0rem;
+    right: 0rem;
     width: 100%;
-    height: 1.8rem;
+    height: 3rem;
     background-color: #fff;
 
 
 }
 
 .buttonTop {
+    font-size: 1.5rem;
     margin: 0 auto;
+    margin-top: 0.5rem;
     margin-left: 50%;
-    height: 1.8rem;
+    height: 2rem;
     background-color: #fff;
     color: #000;
     border: none;
@@ -212,15 +241,34 @@ main {
     font-size: 1.75rem;
 }
 
-.intro h2,
-p {
+.intro h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1rem;
+}
+
+@media screen and (min-width:64rem) {
+    .intro p {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
 }
 
 .intro a {
     color: #000;
     text-decoration: none;
     border-bottom: 2px solid #000;
+}
+
+@media screen and (min-width:64rem) {
+    .intro a {
+        font-size: 1.75rem;
+    }
+    
 }
 
 .artExhibitions {
@@ -230,6 +278,16 @@ p {
 
 .artExhibitions a {
     text-decoration: none;
+}
+
+@media screen and (min-width:70rem) {
+    .artExhibitionsLink {
+        transform: translateX(0) translateY(-50%) rotate( 
+            -90deg);
+                position: absolute;
+                left: 1%;
+                top: 90%;
+    }
 }
 
 .card {
@@ -294,7 +352,24 @@ p {
 }
 
 .bio h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+@media screen and (min-width:64rem) {
+    .bio h2 {
+        font-size: 2.6rem;
+    }
+}
+
+.bio p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+@media screen and (min-width:64rem) {
+    .bio p {
+        font-size: 1.75rem;
+    }
 }
 
 .bio a {
@@ -302,6 +377,12 @@ p {
     color: #000;
     font-weight: 600;
     font-size: 1.1rem;
+}
+
+@media screen and (min-width:64rem) {
+    .bio p {
+        font-size: 1.75rem;
+    }
 }
 
 .bio a:hover {
@@ -323,12 +404,28 @@ p {
 
 }
 
+.studioContainer {
+    margin-bottom: 4rem;
+}
+
+@media screen and (min-width:48rem) {
+
+
+    .studioContainer {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.studioCards {
+    margin-bottom: 3rem;
+}
+
 .studioCards img {
     width: 100%;
     object-fit: cover;
     object-position: center;
     margin-top: 1rem;
-
 }
 
 .studioCards h3 {
@@ -337,7 +434,13 @@ p {
     font-size: 1rem;
 }
 
+.studioCards p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
 .studioCards a {
+    font-size: 0.9rem;
     text-decoration: none;
     margin-bottom: 1rem;
     color: #000;
@@ -349,6 +452,16 @@ p {
     border-color: #003cff;
 }
 
+@media screen and (min-width:48rem) {
+
+    .studioCards {
+        margin-right: 2rem;
+        width: 30%;
+    }
+
+
+}
+
 /* end index.html */
 
 /* begin biography */
@@ -356,24 +469,43 @@ p {
 .containerBiography img {
     width: 100%;
     margin-bottom: 2rem;
-
 }
 
-@media screen and (min-width:48rem) {
-    .containerBiography img {
-        width: 60%;
-    }
-}
+.biographyImg {
+    width: 100%;
+    margin-bottom: 2rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50vw);
 
+}
 
 
 .biographyText h2 {
     margin: 2rem 0rem 1rem 0rem;
     font-weight: 500;
+    font-size: 2rem;
 }
 
+@media screen and (min-width:48rem) {
+    .biographyText h2 {
+        font-size: 2.6rem;
+    }
+
+}
+
+
 .biographyText {
-    width: 90%;
+    width: 90%;   
+}
+
+@media screen and (min-width:48rem) {
+
+    .biographyText {
+
+        width: 60%;
+        margin-left: 7rem;
+    }
 }
 
 .biographyImg {
@@ -383,10 +515,16 @@ p {
 
 .containerBiography p {
     margin-bottom: 4rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 
 }
 
+@media screen and (min-width:48rem) {
+    .containerBiography p {
+        font-size: 1.3rem;
+    }
+
+}
 
 .place p {
     text-align: right;
@@ -402,21 +540,24 @@ p {
         display: flex;
         align-items: center;
     }
-
-    .biographyText {
-
-        width: 60%;
-    }
 }
 
 iframe {
-    margin-bottom: 4rem;
+    width: 90%;
+    max-width: 35rem;
+    margin: 5rem auto;
+    height: 20rem;
 }
 
+
+.quote {
+    margin: 0 auto;
+}
 
 .quote p {
     font-size: 1.9rem;
     text-align: center;
+    
 }
 
 .flexImage h2 {
@@ -424,13 +565,31 @@ iframe {
 
 }
 
-.flexImage p,
-.naturText p {
-    margin-bottom: 1rem;
+.flexImage p {
+    margin-bottom: 3rem;
+    order: -1;
+    margin-right: 4rem;
 }
+
+.naturText {
+    margin: 0 auto;
+}
+
+.naturText h2 {
+    text-align: center;
+}
+
+.naturText p {
+    margin-bottom: 3rem;
+}
+
 
 .diversityText {
     margin-bottom: 3rem;
+}
+
+.videoText {
+    margin: 0 auto;
 }
 
 @media screen and (min-width:48rem) {
@@ -476,7 +635,7 @@ iframe {
 /*begin extra page press */
 
 .containerPress {
-    width: 60%;
+    width: 90%;
 
 }
 
@@ -496,6 +655,114 @@ ul {
     width: 70%;
 }
 
+.menuPress a {
+    font-size: 1.3rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.menuPress a:hover {
+    color: #003cff;
+    border-bottom: 2px solid #003cff;
+}
+
+.contactPress p {
+    margin-bottom: 1rem;
+}
+
+.containerPress p {
+    margin-bottom: 1rem;
+}
+
+.containerPress li {
+    font-size: 1.3rem;
+}
+
+
+.documentAndFiles {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width:48rem) {
+    .documentAndFiles {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}
+
+.documentCard img {
+    width: 5%;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width:48rem) {
+    .documentCard img {
+        width: 10%;
+    }
+}
+
+.documentCard p,a {
+    font-size: 0.9rem;
+}
+
+.documentCard {
+    margin: 0 auto;
+    margin-bottom: 3rem; 
+    width: 90%;
+    padding: 1rem;
+    border: 2px solid #e6e6e6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (min-width:48rem) {
+    .documentCard {
+        width: 20%;
+    }
+}
+
+.imageCardPress {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    align-items: flex-start;
+}
+
+.imageCardPress img {
+    width: 100%;
+    margin-bottom: 1rem;
+    
+}
+
+.imagesPress {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.imageCardPress a {
+    color: #000;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 2px solid #000;
+}
+
+.imageCardPress a:hover {
+    color: #003cff;
+    border-color: #003cff;
+
+}
+
 /* begin atelier */
 
 .studio {
@@ -509,9 +776,13 @@ ul {
     font-size: 1rem;
 }
 
-@media screen and (min-width:48rem) {
+@media screen and (min-width:64rem) {
     .studio p {
         font-size: 1.75rem;
+    }
+
+    .studio h2 {
+        font-size: 2.6rem;
     }
 
 }
@@ -524,7 +795,6 @@ ul {
 .cardAtelier {
     width: 90%;
     margin: 2rem 1rem;
-
 }
 
 .cardAtelier img {
@@ -542,6 +812,7 @@ ul {
 }
 
 .cardAtelier a {
+    font-size: 1.3rem;
     text-decoration: none;
     margin-bottom: 1rem;
     color: #000;
@@ -554,7 +825,8 @@ ul {
 }
 
 .cardAtelier p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -574,14 +846,14 @@ ul {
 
 /* start press pagina */
 
-.pressContainer {
+.pressReleases {
     width: 90%;
     margin: 0 auto;
 }
 
 .pressCards {
     width: 90%;
-    margin: 2rem 1rem;
+    margin: 2rem 4rem 1rem 0rem;
 
 }
 
@@ -596,12 +868,22 @@ ul {
 .pressCards h3 {
     color: #787878;
     margin: 1rem 0rem 0.5rem 0rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
+}
+
+.pressCards h2 {
+    font-size: 1.75rem;
+}
+
+.pressCards p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
 }
 
 .pressCards a {
+    font-size: 1.3rem;
     text-decoration: none;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: #000;
     border-bottom: 2px solid #000;
 }
@@ -612,7 +894,7 @@ ul {
 }
 
 @media screen and (min-width:48rem) {
-    .pressContainer {
+    .pressReleases {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -622,8 +904,6 @@ ul {
         width: 25%;
     }
 }
-
-
 /* begin art and exhibtions */
 
 .filter {
@@ -700,6 +980,11 @@ button.category {
     color: #787878;
 }
 
+.artContainer li {
+    
+    list-style: none;
+}
+
 
 @media screen and (min-width:48rem) {
 
@@ -712,6 +997,10 @@ button.category {
     .textContainerArt {
         width: 50%;
     }
+}
+
+.artContainerimg img {
+    margin-right: 2rem;
 }
 
 
@@ -756,6 +1045,31 @@ button.category {
 .lupineText p {
     font-size: 1.3rem;
     font-weight: 300;
+}
+
+.lupine {
+    margin-bottom: 3rem;
+}
+
+.sculpture {
+    width: 90%;
+}
+
+.sculpture p {
+    font-size: 0.8rem;
+    color: #787878;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+@media screen and (min-width:48rem) {
+
+    .lupineContainerText {
+        display: flex;
+    }
+
+    .lupineText {
+        width: 50%;
+    }
 }
 
 @media screen and (min-width:48rem) {
@@ -839,18 +1153,24 @@ button.category {
     font-size: 1rem;
 }
 
+.contactContainer {
+    margin-top: 3rem;
+}
+
 @media screen and (min-width:48rem) {
     .contactContainer{
         display: flex;
+        justify-content: space-between;
     }
 
     .contactGallery {
         margin-right: 1rem;
-        width: 40%;
+        width: 30%;
     }
     
     .contactAtelier {
-        width: 33%;
+        width: 30%;
+        margin-right: 1rem;
     }
     
 }
@@ -876,19 +1196,46 @@ button.category {
     color: #003cff;
 }
 
+.form {
+    width: 100%;
+}
 
 @media screen and (min-width:48rem) {
-
-
-    .studioContainer {
-        display: flex;
-        align-items: center;
+    .form {
+        width: 33%;
     }
-
-    .studioCards {
-        margin-right: 2rem;
-        width: 30%;
-    }
-
-
 }
+
+input[type="submit"] {
+    color: #fff;
+    background-color: #003cff;
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+input#message {
+    width: 75%;
+    height: 6rem;
+    max-width: 18rem;
+    margin-bottom: 1rem;
+}
+
+input#email1 {
+    width: 100%;
+background-color: #ffffff;
+padding: 5px;
+max-width: 18rem;
+margin-bottom: 1rem;
+}
+
+select#category {
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+
+
+

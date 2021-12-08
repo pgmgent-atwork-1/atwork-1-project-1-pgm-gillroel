@@ -10,12 +10,14 @@
         },
 
         buildUI() {
-            
-            this.$pressContainer.innerHTML = this.generateHTMLForPress();
+            this.$pressReleases.innerHTML = this.generateHTMLForPress();
+
         },
 
+
         cachesElements() {
-            this.$pressContainer = document.querySelector(".pressContainer");
+            this.$pressReleases = document.querySelector(".pressReleases");
+            
 
         },
 
@@ -29,13 +31,14 @@
                 <h3>${art.subtitle}</h3>
                 <h2>${art.title}</h2>
                 <p>${art.synopsis}</p>
-                <a href="#">visit website</a>
+                <a href="press/detail/index.html">${art.linkCategory}</a>
             </div>`
             }).join("");
             
             return htmlPressMapped;
 
         },
+        
 
     };
 
